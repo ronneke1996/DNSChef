@@ -1,0 +1,11 @@
+[Unit]
+Description=DNSChef is a highly configurable DNS proxy
+
+[Service]
+Type=simple
+ExecStart=/opt/dnschef/venv/bin/python /opt/dnschef/dnschef.py --file /opt/dnschef/chef.ini
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
